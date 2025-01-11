@@ -14,9 +14,9 @@
 
 ## 화면
 문제 해설 확인 `index.html`
-<img src='questions.gif' width=60%>
+\n <img src='questions.gif' width=60%>
 코딩 실습 `notebook.ipynb`
-<img src='notebook.gif' width=60%>
+\n <img src='notebook.gif' width=60%>
 
 ## 설치
 1. VS Code 설치
