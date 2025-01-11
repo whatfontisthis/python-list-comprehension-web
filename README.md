@@ -1,4 +1,5 @@
 # 🔥 Python List Comprehension Exercises
+Inspired by <a href='https://www.tutorjoes.in/python_programming_tutorial/list_comprehensions_exercises_in_python#google_vignette'> Tutor Joe's Stanley</a> 
 
 **Python 리스트 컴프리헨션 연습 문제** 프로젝트에 오신 것을 환영합니다! 🚀  
 이 인터랙티브 웹 페이지는 Python의 리스트 컴프리헨션을 연습하고 마스터하기 위한 다양한 문제를 제공합니다. 문제는 **쉬움**부터 **어려움**까지 세 가지 난이도로 구성되어 있습니다.  
