@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python List Comprehensions Exercises</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        h2 {
+            margin-top: 40px;
+        }
+        .easy-heading {
+            color: green;
+        }
+        .medium-heading {
+            color: #ffc107; /* Yellow */
+        }
+        .hard-heading {
+            color: red;
+        }
+        .question-container {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .question-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .sample-output {
+            font-family: monospace;
+            background: #f0f0f0;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .toggle-button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            color: white;
+        }
+        .easy-button {
+            background-color: green;
+        }
+        .easy-button:hover {
+            background-color: darkgreen;
+        }
+        .medium-button {
+            background-color: #ffc107; /* Yellow */
+            color: black;
+        }
+        .medium-button:hover {
+            background-color: #e0a800; /* Darker yellow */
+        }
+        .hard-button {
+            background-color: red;
+        }
+        .hard-button:hover {
+            background-color: darkred;
+        }
+        .solution {
+            display: none;
+            margin-top: 10px;
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #e9ecef;
+        }
+    </style>
+    <script>
+        // Function to toggle solutions
+        function toggleSolution(id) {
+            const solution = document.getElementById(id);
+            if (solution.style.display === "none" || !solution.style.display) {
+                solution.style.display = "block";
+            } else {
+                solution.style.display = "none";
+            }
+        }
+
+        // Function to load questions from external JSON file
+        let globalCount=1;
+        async function loadQuestions() {
+            const response = await fetch('questions.json'); // Replace with the path to your JSON file
+            const questions = await response.json();
+
+            const easyContainer = document.getElementById('easy-questions');
+            const mediumContainer = document.getElementById('medium-questions');
+            const hardContainer = document.getElementById('hard-questions');
+
+            let easyCount = 1;
+            let mediumCount = 1;
+            let hardCount = 1;
+
+            questions.forEach((q) => {
+                const questionDiv = document.createElement('div');
+                questionDiv.classList.add('question-container');
+
+                const title = document.createElement('div');
+                title.classList.add('question-title');
+                title.textContent = `Q${globalCount}. ${q.question}`;
+                globalCount++;
+                questionDiv.appendChild(title);
+
+                const sampleOutput = document.createElement('div');
+                sampleOutput.classList.add('sample-output');
+                sampleOutput.textContent = `Sample Output: ${q.sampleOutput}`;
+                questionDiv.appendChild(sampleOutput);
+
+                const button = document.createElement('button');
+                button.classList.add('toggle-button');
+                const uniqueId = `solution-${easyCount + mediumCount + hardCount}`;
+                button.setAttribute('onclick', `toggleSolution('${uniqueId}')`);
+
+                const solutionDiv = document.createElement('div');
+                solutionDiv.classList.add('solution');
+                solutionDiv.setAttribute('id', uniqueId);
+                solutionDiv.innerHTML = `<p><strong>Answer:</strong></p><pre>${q.solution.answer}</pre><p><strong>Explanation:</strong> ${q.solution.explanation}</p>`;
+                questionDiv.appendChild(solutionDiv);
+
+                // Add the question to the respective container based on its hardy
+                if (easyCount <= 10) {
+                    easyContainer.appendChild(questionDiv);
+                    button.textContent = 'View Solution';
+                    button.classList.add('easy-button');
+                    questionDiv.appendChild(button);
+                    easyCount++;
+                } else if (mediumCount <= 10) {
+                    mediumContainer.appendChild(questionDiv);
+                    button.textContent = 'View Solution';
+                    button.classList.add('medium-button');
+                    questionDiv.appendChild(button);
+                    mediumCount++;
+                } else {
+                    hardContainer.appendChild(questionDiv);
+                    button.textContent = 'View Solution';
+                    button.classList.add('hard-button');
+                    questionDiv.appendChild(button);
+                    hardCount++;
+                }
+            });
+        }
+
+        // Load questions on page load
+        window.onload = loadQuestions;
+    </script>
+</head>
+<body>
+    <h1>Python List Comprehensions Exercises</h1>
+
+    <h2 class="easy-heading">Easy Questions</h2>
+    <div id="easy-questions"></div>
+
+    <h2 class="medium-heading">Medium Questions</h2>
+    <div id="medium-questions"></div>
+
+    <h2 class="hard-heading">Hard Questions</h2>
+    <div id="hard-questions"></div>
+</body>
+</html>
