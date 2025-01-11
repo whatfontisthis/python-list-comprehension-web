@@ -14,8 +14,8 @@
 
 ## 화면
 문제 해설 확인 `index.html` ![문제 페이지](questions.gif)
-
-코딩 실습 `notebook.ipynb`![노트북](notebook.gif)
+<img src='questions.gif' width=50%>
+코딩 실습 `notebook.ipynb` ![노트북](notebook.gif)
 
 
 ## 설치
