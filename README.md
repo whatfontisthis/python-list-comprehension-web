@@ -13,10 +13,10 @@
 - 깔끔하고 반응형인 UI 디자인.
 
 ## 화면
-문제 해설 확인 `index.html`
-\n <img src='questions.gif' width=60%>
-코딩 실습 `notebook.ipynb`
-\n <img src='notebook.gif' width=60%>
+<p>문제 해설 확인 `index.html`</p>
+<p><img src='questions.gif' width=60%></p>
+<p>코딩 실습 `notebook.ipynb`</p>
+<p><img src='notebook.gif' width=60%></p>
 
 ## 설치
 1. VS Code 설치
