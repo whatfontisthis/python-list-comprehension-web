@@ -13,7 +13,10 @@
 - 깔끔하고 반응형인 UI 디자인.
 
 ## 화면
-![데모 스크린샷](demo-screenshot.png)
+문제 해설 확인 `index.html` ![문제 페이지](questions.gif)
+
+코딩 실습 `notebook.ipynb`![노트북](notebook.gif)
+
 
 ## 설치
 1. VS Code 설치
