@@ -19,7 +19,7 @@ Inspired by <a href='https://www.tutorjoes.in/python_programming_tutorial/list_c
 ## 화면
 
 <p>문제 해설 확인 `index.html`</p>
-<p><img src='images/questions.gif' width=60%></p>
+<p><img src='images/question.gif' width=60%></p>
 <p>코딩 실습 `notebook.ipynb`</p>
 <p><img src='images/notebook.gif' width=60%></p>
 
