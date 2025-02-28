@@ -1,325 +1,324 @@
 [
-    {
-        "question": "Create a List of Squares of numbers from 1 to 10",
-        "sampleOutput": "[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]",
-        "solution": {
-            "answer": "[x**2 for x in range(1, 11)]",
-            "explanation": "This list comprehension iterates over numbers from 1 to 10, squaring each number."
-        }
-    },
-    {
-        "question": "Create a List of Even numbers from 1 to 20",
-        "sampleOutput": "[2, 4, 6, 8, 10, 12, 14, 16, 18, 20]",
-        "solution": {
-            "answer": "[x for x in range(1, 21) if x % 2 == 0]",
-            "explanation": "This comprehension includes only numbers divisible by 2 in the range 1 to 20."
-        }
-    },
-    {
-        "question": "Create a List of Strings representing numbers from 1 to 5",
-        "sampleOutput": "['1', '2', '3', '4', '5']",
-        "solution": {
-            "answer": "[str(x) for x in range(1, 6)]",
-            "explanation": "This list comprehension converts each number in the range 1 to 5 into a string."
-        }
-    },
-    {
-        "question": "Create a List of lengths of each word in the list ['apple', 'banana', 'cherry']",
-        "sampleOutput": "[5, 6, 6]",
-        "solution": {
-            "answer": "[len(word) for word in ['apple', 'banana', 'cherry']]",
-            "explanation": "This comprehension calculates the length of each word in the given list."
-        }
-    },
-    {
-        "question": "Filter out all words with length less than 5 from ['apple', 'bat', 'cat', 'elephant']",
-        "sampleOutput": "['apple', 'elephant']",
-        "solution": {
-            "answer": "[word for word in ['apple', 'bat', 'cat', 'elephant'] if len(word) >= 5]",
-            "explanation": "This comprehension retains only words with length greater than or equal to 5."
-        }
-    },
-    {
-        "question": "Create a List of tuples where each tuple contains a number and its square, for numbers from 1 to 5",
-        "sampleOutput": "[(1, 1), (2, 4), (3, 9), (4, 16), (5, 25)]",
-        "solution": {
-            "answer": "[(x, x**2) for x in range(1, 6)]",
-            "explanation": "This comprehension creates tuples with each number and its square."
-        }
-    },
-    {
-        "question": "Flatten a list of lists [[1, 2], [3, 4], [5, 6]] into a single list",
-        "sampleOutput": "[1, 2, 3, 4, 5, 6]",
-        "solution": {
-            "answer": "[item for sublist in [[1, 2], [3, 4], [5, 6]] for item in sublist]",
-            "explanation": "This comprehension iterates through each sublist, then each item, to create a flat list."
-        }
-    },
-    {
-        "question": "Create a List of uppercase strings from the list ['hello', 'world', 'python']",
-        "sampleOutput": "['HELLO', 'WORLD', 'PYTHON']",
-        "solution": {
-            "answer": "[word.upper() for word in ['hello', 'world', 'python']]",
-            "explanation": "This comprehension converts each string in the list to uppercase."
-        }
-    },
-    {
-        "question": "Generate a List of all numbers divisible by 3 or 5 from 1 to 50",
-        "sampleOutput": "[3, 5, 6, 9, 10, 12, 15, 18, 20, ...]",
-        "solution": {
-            "answer": "[x for x in range(1, 51) if x % 3 == 0 or x % 5 == 0]",
-            "explanation": "This comprehension filters numbers divisible by 3 or 5 in the range 1 to 50."
-        }
-    },
-    {
-        "question": "Create a dictionary from the list ['a', 'b', 'c'] where keys are the letters and values are their ASCII values",
-        "sampleOutput": "{'a': 97, 'b': 98, 'c': 99}",
-        "solution": {
-            "answer": "{char: ord(char) for char in ['a', 'b', 'c']}",
-            "explanation": "This comprehension maps each character in the list to its ASCII value."
-        }
-    },
-    
-    {
-        "question": "Create a list of the cubes of all odd numbers from 1 to 20",
-        "sampleOutput": "[1, 27, 125, 343, 729, 1331, 2197, 3375]",
-        "solution": {
-            "answer": "[x**3 for x in range(1, 21) if x % 2 != 0]",
-            "explanation": "This list comprehension cubes each odd number in the range 1 to 20."
-        }
-    },
-    {
-        "question": "Filter all palindromes from the list ['level', 'world', 'radar', 'hello', 'civic']",
-        "sampleOutput": "['level', 'radar', 'civic']",
-        "solution": {
-            "answer": "[word for word in ['level', 'world', 'radar', 'hello', 'civic'] if word == word[::-1]]",
-            "explanation": "This comprehension checks if a word is equal to its reverse and includes it if true."
-        }
-    },
-    {
-        "question": "Create a list of the product of corresponding elements from two lists [1, 2, 3] and [4, 5, 6]",
-        "sampleOutput": "[4, 10, 18]",
-        "solution": {
-            "answer": "[a * b for a, b in zip([1, 2, 3], [4, 5, 6])]",
-            "explanation": "This comprehension multiplies corresponding elements from the two lists using zip."
-        }
-    },
-    {
-        "question": "Generate a list of all words with length greater than 3 from the sentence 'Python is amazing and powerful'",
-        "sampleOutput": "['Python', 'amazing', 'powerful']",
-        "solution": {
-            "answer": "[word for word in 'Python is amazing and powerful'.split() if len(word) > 3]",
-            "explanation": "This comprehension splits the sentence into words and filters for words with length greater than 3."
-        }
-    },
-    {
-        "question": "Create a list of all numbers from 1 to 50 that are divisible by both 2 and 3",
-        "sampleOutput": "[6, 12, 18, 24, 30, 36, 42, 48]",
-        "solution": {
-            "answer": "[x for x in range(1, 51) if x % 2 == 0 and x % 3 == 0]",
-            "explanation": "This comprehension filters numbers divisible by both 2 and 3 in the range 1 to 50."
-        }
-    },
-    {
-        "question": "Generate a list of the first letters of each word in the sentence 'List comprehensions are powerful tools'",
-        "sampleOutput": "['L', 'c', 'a', 'p', 't']",
-        "solution": {
-            "answer": "[word[0] for word in 'List comprehensions are powerful tools'.split()]",
-            "explanation": "This comprehension extracts the first letter of each word in the sentence."
-        }
-    },
-    {
-        "question": "Create a list of all unique characters in the string 'programming' (ignoring duplicates)",
-        "sampleOutput": "['p', 'r', 'o', 'g', 'a', 'm', 'i', 'n']",
-        "solution": {
-            "answer": "[char for char in set('programming')]",
-            "explanation": "This comprehension iterates over the set of unique characters in the string."
-        }
-    },
-    {
-        "question": "Create a dictionary where keys are numbers from 1 to 5 and values are their factorials",
-        "sampleOutput": "{1: 1, 2: 2, 3: 6, 4: 24, 5: 120}",
-        "solution": {
-            "answer": "{x: (1 if x == 1 else x * (x - 1)) for x in range(1, 6)}",
-            "explanation": "This comprehension calculates the factorial of numbers from 1 to 5."
-        }
-    },
-    {
-        "question": "Flatten a nested list of lists of varying lengths [[1, 2], [3], [4, 5, 6]] into a single list",
-        "sampleOutput": "[1, 2, 3, 4, 5, 6]",
-        "solution": {
-            "answer": "[item for sublist in [[1, 2], [3], [4, 5, 6]] for item in sublist]",
-            "explanation": "This comprehension iterates through each sublist and each item to create a flat list."
-        }
-    },
-    {
-        "question": "Generate a list of numbers from 1 to 100 where the number is replaced by 'Fizz', 'Buzz', or 'FizzBuzz' if divisible by 3, 5, or both, respectively",
-        "sampleOutput": "['1', '2', 'Fizz', '4', 'Buzz', 'Fizz', ..., 'FizzBuzz']",
-        "solution": {
-            "answer": "['FizzBuzz' if x % 3 == 0 and x % 5 == 0 else 'Fizz' if x % 3 == 0 else 'Buzz' if x % 5 == 0 else str(x) for x in range(1, 101)]",
-            "explanation": "This comprehension replaces numbers divisible by 3 and 5 with 'FizzBuzz', 3 with 'Fizz', and 5 with 'Buzz'."
-        }
-    },
-    
-    {
-        "question": "Create a list of the cubes of all odd numbers from 1 to 20",
-        "sampleOutput": "[1, 27, 125, 343, 729, 1331, 2197, 3375]",
-        "solution": {
-            "answer": "[x**3 for x in range(1, 21) if x % 2 != 0]",
-            "explanation": "This list comprehension cubes each odd number in the range 1 to 20."
-        }
-    },
-    {
-        "question": "Filter all palindromes from the list ['level', 'world', 'radar', 'hello', 'civic']",
-        "sampleOutput": "['level', 'radar', 'civic']",
-        "solution": {
-            "answer": "[word for word in ['level', 'world', 'radar', 'hello', 'civic'] if word == word[::-1]]",
-            "explanation": "This comprehension checks if a word is equal to its reverse and includes it if true."
-        }
-    },
-    {
-        "question": "Create a list of the product of corresponding elements from two lists [1, 2, 3] and [4, 5, 6]",
-        "sampleOutput": "[4, 10, 18]",
-        "solution": {
-            "answer": "[a * b for a, b in zip([1, 2, 3], [4, 5, 6])]",
-            "explanation": "This comprehension multiplies corresponding elements from the two lists using zip."
-        }
-    },
-    {
-        "question": "Generate a list of all words with length greater than 3 from the sentence 'Python is amazing and powerful'",
-        "sampleOutput": "['Python', 'amazing', 'powerful']",
-        "solution": {
-            "answer": "[word for word in 'Python is amazing and powerful'.split() if len(word) > 3]",
-            "explanation": "This comprehension splits the sentence into words and filters for words with length greater than 3."
-        }
-    },
-    {
-        "question": "Create a list of all numbers from 1 to 50 that are divisible by both 2 and 3",
-        "sampleOutput": "[6, 12, 18, 24, 30, 36, 42, 48]",
-        "solution": {
-            "answer": "[x for x in range(1, 51) if x % 2 == 0 and x % 3 == 0]",
-            "explanation": "This comprehension filters numbers divisible by both 2 and 3 in the range 1 to 50."
-        }
-    },
-    {
-        "question": "Generate a list of the first letters of each word in the sentence 'List comprehensions are powerful tools'",
-        "sampleOutput": "['L', 'c', 'a', 'p', 't']",
-        "solution": {
-            "answer": "[word[0] for word in 'List comprehensions are powerful tools'.split()]",
-            "explanation": "This comprehension extracts the first letter of each word in the sentence."
-        }
-    },
-    {
-        "question": "Create a list of all unique characters in the string 'programming' (ignoring duplicates)",
-        "sampleOutput": "['p', 'r', 'o', 'g', 'a', 'm', 'i', 'n']",
-        "solution": {
-            "answer": "[char for char in set('programming')]",
-            "explanation": "This comprehension iterates over the set of unique characters in the string."
-        }
-    },
-    {
-        "question": "Create a dictionary where keys are numbers from 1 to 5 and values are their factorials",
-        "sampleOutput": "{1: 1, 2: 2, 3: 6, 4: 24, 5: 120}",
-        "solution": {
-            "answer": "{x: (1 if x == 1 else x * (x - 1)) for x in range(1, 6)}",
-            "explanation": "This comprehension calculates the factorial of numbers from 1 to 5."
-        }
-    },
-    {
-        "question": "Flatten a nested list of lists of varying lengths [[1, 2], [3], [4, 5, 6]] into a single list",
-        "sampleOutput": "[1, 2, 3, 4, 5, 6]",
-        "solution": {
-            "answer": "[item for sublist in [[1, 2], [3], [4, 5, 6]] for item in sublist]",
-            "explanation": "This comprehension iterates through each sublist and each item to create a flat list."
-        }
-    },
-    {
-        "question": "Generate a list of numbers from 1 to 100 where the number is replaced by 'Fizz', 'Buzz', or 'FizzBuzz' if divisible by 3, 5, or both, respectively",
-        "sampleOutput": "['1', '2', 'Fizz', '4', 'Buzz', 'Fizz', ..., 'FizzBuzz']",
-        "solution": {
-            "answer": "['FizzBuzz' if x % 3 == 0 and x % 5 == 0 else 'Fizz' if x % 3 == 0 else 'Buzz' if x % 5 == 0 else str(x) for x in range(1, 101)]",
-            "explanation": "This comprehension replaces numbers divisible by 3 and 5 with 'FizzBuzz', 3 with 'Fizz', and 5 with 'Buzz'."
-        }
-    },
-    {
-        "question": "Create a matrix (list of lists) representing a 3x3 identity matrix",
-        "sampleOutput": "[[1, 0, 0], [0, 1, 0], [0, 0, 1]]",
-        "solution": {
-            "answer": "[[1 if i == j else 0 for j in range(3)] for i in range(3)]",
-            "explanation": "This nested comprehension creates rows of the identity matrix by checking if row index equals column index."
-        }
-    },
-    {
-        "question": "Transpose a matrix [[1, 2, 3], [4, 5, 6], [7, 8, 9]]",
-        "sampleOutput": "[[1, 4, 7], [2, 5, 8], [3, 6, 9]]",
-        "solution": {
-            "answer": "[[row[i] for row in [[1, 2, 3], [4, 5, 6], [7, 8, 9]]] for i in range(3)]",
-            "explanation": "This comprehension iterates over columns of the original matrix to form rows of the transposed matrix."
-        }
-    },
-    {
-        "question": "Flatten a deeply nested list of lists [[1, [2, 3]], [[4, 5]], [6]] into a single list",
-        "sampleOutput": "[1, 2, 3, 4, 5, 6]",
-        "solution": {
-            "answer": "from itertools import chain; list(chain.from_iterable([item if isinstance(item, list) else [item] for sublist in [[1, [2, 3]], [[4, 5]], [6]] for item in sublist]))",
-            "explanation": "This uses a combination of list comprehension and itertools.chain to handle multiple nesting levels."
-        }
-    },
-    {
-        "question": "Generate a list of all prime numbers between 1 and 100",
-        "sampleOutput": "[2, 3, 5, 7, 11, 13, ..., 97]",
-        "solution": {
-            "answer": "[x for x in range(2, 101) if all(x % y != 0 for y in range(2, int(x**0.5) + 1))]",
-            "explanation": "This comprehension checks for divisors up to the square root of each number to identify primes."
-        }
-    },
-    {
-        "question": "Generate all permutations of the list [1, 2, 3]",
-        "sampleOutput": "[[1, 2, 3], [1, 3, 2], [2, 1, 3], [2, 3, 1], [3, 1, 2], [3, 2, 1]]",
-        "solution": {
-            "answer": "from itertools import permutations; [list(p) for p in permutations([1, 2, 3])]",
-            "explanation": "This uses itertools.permutations to generate all permutations of the list."
-        }
-    },
-    {
-        "question": "Create a spiral pattern for a 3x3 matrix [[1, 2, 3], [8, 9, 4], [7, 6, 5]] using list comprehension",
-        "sampleOutput": "[[1, 2, 3], [8, 9, 4], [7, 6, 5]]",
-        "solution": {
-            "answer": "[[1, 2, 3], [8, 9, 4], [7, 6, 5]]  # Solution may require breaking out into helper functions for brevity",
-            "explanation": "This is complex and often solved using algorithms rather than pure list comprehension."
-        }
-    },
-    {
-        "question": "Generate Pascal's Triangle up to 5 rows",
-        "sampleOutput": "[[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1]]",
-        "solution": {
-            "answer": "[[1 if j == 0 or j == i else pascal[i-1][j-1] + pascal[i-1][j] for j in range(i + 1)] for i in range(5)]",
-            "explanation": "This uses recursive logic to calculate each row based on the previous row."
-        }
-    },
-    {
-        "question": "Generate a list of all possible combinations of two letters from the string 'abc'",
-        "sampleOutput": "['ab', 'ac', 'bc']",
-        "solution": {
-            "answer": "[a + b for i, a in enumerate('abc') for b in 'abc'[i + 1:]]",
-            "explanation": "This comprehension creates combinations by iterating over pairs of letters in the string."
-        }
-    },
-    {
-        "question": "Filter out all sublists that are not sorted from [[1, 2, 3], [4, 3, 5], [7, 8, 9], [10, 9, 8]]",
-        "sampleOutput": "[[1, 2, 3], [7, 8, 9]]",
-        "solution": {
-            "answer": "[sublist for sublist in [[1, 2, 3], [4, 3, 5], [7, 8, 9], [10, 9, 8]] if sublist == sorted(sublist)]",
-            "explanation": "This comprehension checks if each sublist equals its sorted version."
-        }
-    },
-    {
-        "question": "Generate a dictionary where keys are integers from 1 to 10 and values are lists of their divisors",
-        "sampleOutput": "{1: [1], 2: [1, 2], 3: [1, 3], 4: [1, 2, 4], ...}",
-        "solution": {
-            "answer": "{x: [d for d in range(1, x + 1) if x % d == 0] for x in range(1, 11)}",
-            "explanation": "This comprehension generates lists of divisors for each integer from 1 to 10."
-        }
+  {
+    "question": "Create a List of Squares of numbers from 1 to 10",
+    "sampleOutput": "[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]",
+    "solution": {
+      "answer": "[x**2 for x in range(1, 11)]",
+      "explanation": "This list comprehension iterates over numbers from 1 to 10, squaring each number."
     }
-    
+  },
+  {
+    "question": "Create a List of Even numbers from 1 to 20",
+    "sampleOutput": "[2, 4, 6, 8, 10, 12, 14, 16, 18, 20]",
+    "solution": {
+      "answer": "[x for x in range(1, 21) if x % 2 == 0]",
+      "explanation": "This comprehension includes only numbers divisible by 2 in the range 1 to 20."
+    }
+  },
+  {
+    "question": "Create a List of Strings representing numbers from 1 to 5",
+    "sampleOutput": "['1', '2', '3', '4', '5']",
+    "solution": {
+      "answer": "[str(x) for x in range(1, 6)]",
+      "explanation": "This list comprehension converts each number in the range 1 to 5 into a string."
+    }
+  },
+  {
+    "question": "Create a List of lengths of each word in the list ['apple', 'banana', 'cherry']",
+    "sampleOutput": "[5, 6, 6]",
+    "solution": {
+      "answer": "[len(word) for word in ['apple', 'banana', 'cherry']]",
+      "explanation": "This comprehension calculates the length of each word in the given list."
+    }
+  },
+  {
+    "question": "Filter out all words with length less than 5 from ['apple', 'bat', 'cat', 'elephant']",
+    "sampleOutput": "['apple', 'elephant']",
+    "solution": {
+      "answer": "[word for word in ['apple', 'bat', 'cat', 'elephant'] if len(word) >= 5]",
+      "explanation": "This comprehension retains only words with length greater than or equal to 5."
+    }
+  },
+  {
+    "question": "Create a List of tuples where each tuple contains a number and its square, for numbers from 1 to 5",
+    "sampleOutput": "[(1, 1), (2, 4), (3, 9), (4, 16), (5, 25)]",
+    "solution": {
+      "answer": "[(x, x**2) for x in range(1, 6)]",
+      "explanation": "This comprehension creates tuples with each number and its square."
+    }
+  },
+  {
+    "question": "Flatten a list of lists [[1, 2], [3, 4], [5, 6]] into a single list",
+    "sampleOutput": "[1, 2, 3, 4, 5, 6]",
+    "solution": {
+      "answer": "[item for sublist in [[1, 2], [3, 4], [5, 6]] for item in sublist]",
+      "explanation": "This comprehension iterates through each sublist, then each item, to create a flat list."
+    }
+  },
+  {
+    "question": "Create a List of uppercase strings from the list ['hello', 'world', 'python']",
+    "sampleOutput": "['HELLO', 'WORLD', 'PYTHON']",
+    "solution": {
+      "answer": "[word.upper() for word in ['hello', 'world', 'python']]",
+      "explanation": "This comprehension converts each string in the list to uppercase."
+    }
+  },
+  {
+    "question": "Generate a List of all numbers divisible by 3 or 5 from 1 to 50",
+    "sampleOutput": "[3, 5, 6, 9, 10, 12, 15, 18, 20, ...]",
+    "solution": {
+      "answer": "[x for x in range(1, 51) if x % 3 == 0 or x % 5 == 0]",
+      "explanation": "This comprehension filters numbers divisible by 3 or 5 in the range 1 to 50."
+    }
+  },
+  {
+    "question": "Create a dictionary from the list ['a', 'b', 'c'] where keys are the letters and values are their ASCII values",
+    "sampleOutput": "{'a': 97, 'b': 98, 'c': 99}",
+    "solution": {
+      "answer": "{char: ord(char) for char in ['a', 'b', 'c']}",
+      "explanation": "This comprehension maps each character in the list to its ASCII value."
+    }
+  },
+
+  {
+    "question": "Create a list of the cubes of all odd numbers from 1 to 20",
+    "sampleOutput": "[1, 27, 125, 343, 729, 1331, 2197, 3375, 4913, 6859]",
+    "solution": {
+      "answer": "[x**3 for x in range(1, 21) if x % 2 != 0]",
+      "explanation": "This list comprehension cubes each odd number in the range 1 to 20."
+    }
+  },
+  {
+    "question": "Filter all palindromes from the list ['level', 'world', 'radar', 'hello', 'civic']",
+    "sampleOutput": "['level', 'radar', 'civic']",
+    "solution": {
+      "answer": "[word for word in ['level', 'world', 'radar', 'hello', 'civic'] if word == word[::-1]]",
+      "explanation": "This comprehension checks if a word is equal to its reverse and includes it if true."
+    }
+  },
+  {
+    "question": "Create a list of the product of corresponding elements from two lists [1, 2, 3] and [4, 5, 6]",
+    "sampleOutput": "[4, 10, 18]",
+    "solution": {
+      "answer": "[a * b for a, b in zip([1, 2, 3], [4, 5, 6])]",
+      "explanation": "This comprehension multiplies corresponding elements from the two lists using zip."
+    }
+  },
+  {
+    "question": "Generate a list of all words with length greater than 3 from the sentence 'Python is amazing and powerful'",
+    "sampleOutput": "['Python', 'amazing', 'powerful']",
+    "solution": {
+      "answer": "[word for word in 'Python is amazing and powerful'.split() if len(word) > 3]",
+      "explanation": "This comprehension splits the sentence into words and filters for words with length greater than 3."
+    }
+  },
+  {
+    "question": "Create a list of all numbers from 1 to 50 that are divisible by both 2 and 3",
+    "sampleOutput": "[6, 12, 18, 24, 30, 36, 42, 48]",
+    "solution": {
+      "answer": "[x for x in range(1, 51) if x % 2 == 0 and x % 3 == 0]",
+      "explanation": "This comprehension filters numbers divisible by both 2 and 3 in the range 1 to 50."
+    }
+  },
+  {
+    "question": "Generate a list of the first letters of each word in the sentence 'List comprehensions are powerful tools'",
+    "sampleOutput": "['L', 'c', 'a', 'p', 't']",
+    "solution": {
+      "answer": "[word[0] for word in 'List comprehensions are powerful tools'.split()]",
+      "explanation": "This comprehension extracts the first letter of each word in the sentence."
+    }
+  },
+  {
+    "question": "Create a list of all unique characters in the string 'programming' (ignoring duplicates)",
+    "sampleOutput": "[char for char in set('programming')]",
+    "solution": {
+      "answer": "[char for char in set('programming')]",
+      "explanation": "This comprehension iterates over the set of unique characters in the string."
+    }
+  },
+  {
+    "question": "Create a dictionary where keys are numbers from 1 to 5 and values are their factorials",
+    "sampleOutput": "{1: 1, 2: 2, 3: 6, 4: 24, 5: 120}",
+    "solution": {
+      "answer": "{x: (1 if x == 1 else x * (x - 1)) for x in range(1, 6)}",
+      "explanation": "This comprehension calculates the factorial of numbers from 1 to 5."
+    }
+  },
+  {
+    "question": "Flatten a nested list of lists of varying lengths [[1, 2], [3], [4, 5, 6]] into a single list",
+    "sampleOutput": "[1, 2, 3, 4, 5, 6]",
+    "solution": {
+      "answer": "[item for sublist in [[1, 2], [3], [4, 5, 6]] for item in sublist]",
+      "explanation": "This comprehension iterates through each sublist and each item to create a flat list."
+    }
+  },
+  {
+    "question": "Generate a list of numbers from 1 to 100 where the number is replaced by 'Fizz', 'Buzz', or 'FizzBuzz' if divisible by 3, 5, or both, respectively",
+    "sampleOutput": "['1', '2', 'Fizz', '4', 'Buzz', 'Fizz', ..., 'FizzBuzz']",
+    "solution": {
+      "answer": "['FizzBuzz' if x % 3 == 0 and x % 5 == 0 else 'Fizz' if x % 3 == 0 else 'Buzz' if x % 5 == 0 else str(x) for x in range(1, 101)]",
+      "explanation": "This comprehension replaces numbers divisible by 3 and 5 with 'FizzBuzz', 3 with 'Fizz', and 5 with 'Buzz'."
+    }
+  },
+
+  {
+    "question": "Create a list of the cubes of all odd numbers from 1 to 20",
+    "sampleOutput": "[1, 27, 125, 343, 729, 1331, 2197, 3375]",
+    "solution": {
+      "answer": "[x**3 for x in range(1, 21) if x % 2 != 0]",
+      "explanation": "This list comprehension cubes each odd number in the range 1 to 20."
+    }
+  },
+  {
+    "question": "Filter all palindromes from the list ['level', 'world', 'radar', 'hello', 'civic']",
+    "sampleOutput": "['level', 'radar', 'civic']",
+    "solution": {
+      "answer": "[word for word in ['level', 'world', 'radar', 'hello', 'civic'] if word == word[::-1]]",
+      "explanation": "This comprehension checks if a word is equal to its reverse and includes it if true."
+    }
+  },
+  {
+    "question": "Create a list of the product of corresponding elements from two lists [1, 2, 3] and [4, 5, 6]",
+    "sampleOutput": "[4, 10, 18]",
+    "solution": {
+      "answer": "[a * b for a, b in zip([1, 2, 3], [4, 5, 6])]",
+      "explanation": "This comprehension multiplies corresponding elements from the two lists using zip."
+    }
+  },
+  {
+    "question": "Generate a list of all words with length greater than 3 from the sentence 'Python is amazing and powerful'",
+    "sampleOutput": "['Python', 'amazing', 'powerful']",
+    "solution": {
+      "answer": "[word for word in 'Python is amazing and powerful'.split() if len(word) > 3]",
+      "explanation": "This comprehension splits the sentence into words and filters for words with length greater than 3."
+    }
+  },
+  {
+    "question": "Create a list of all numbers from 1 to 50 that are divisible by both 2 and 3",
+    "sampleOutput": "[6, 12, 18, 24, 30, 36, 42, 48]",
+    "solution": {
+      "answer": "[x for x in range(1, 51) if x % 2 == 0 and x % 3 == 0]",
+      "explanation": "This comprehension filters numbers divisible by both 2 and 3 in the range 1 to 50."
+    }
+  },
+  {
+    "question": "Generate a list of the first letters of each word in the sentence 'List comprehensions are powerful tools'",
+    "sampleOutput": "['L', 'c', 'a', 'p', 't']",
+    "solution": {
+      "answer": "[word[0] for word in 'List comprehensions are powerful tools'.split()]",
+      "explanation": "This comprehension extracts the first letter of each word in the sentence."
+    }
+  },
+  {
+    "question": "Create a list of all unique characters in the string 'programming' (ignoring duplicates)",
+    "sampleOutput": "['p', 'r', 'o', 'g', 'a', 'm', 'i', 'n']",
+    "solution": {
+      "answer": "[char for char in set('programming')]",
+      "explanation": "This comprehension iterates over the set of unique characters in the string."
+    }
+  },
+  {
+    "question": "Create a dictionary where keys are numbers from 1 to 5 and values are their factorials",
+    "sampleOutput": "{1: 1, 2: 2, 3: 6, 4: 24, 5: 120}",
+    "solution": {
+      "answer": "{x: (1 if x == 1 else x * (x - 1)) for x in range(1, 6)}",
+      "explanation": "This comprehension calculates the factorial of numbers from 1 to 5."
+    }
+  },
+  {
+    "question": "Flatten a nested list of lists of varying lengths [[1, 2], [3], [4, 5, 6]] into a single list",
+    "sampleOutput": "[1, 2, 3, 4, 5, 6]",
+    "solution": {
+      "answer": "[item for sublist in [[1, 2], [3], [4, 5, 6]] for item in sublist]",
+      "explanation": "This comprehension iterates through each sublist and each item to create a flat list."
+    }
+  },
+  {
+    "question": "Generate a list of numbers from 1 to 100 where the number is replaced by 'Fizz', 'Buzz', or 'FizzBuzz' if divisible by 3, 5, or both, respectively",
+    "sampleOutput": "['1', '2', 'Fizz', '4', 'Buzz', 'Fizz', ..., 'FizzBuzz']",
+    "solution": {
+      "answer": "['FizzBuzz' if x % 3 == 0 and x % 5 == 0 else 'Fizz' if x % 3 == 0 else 'Buzz' if x % 5 == 0 else str(x) for x in range(1, 101)]",
+      "explanation": "This comprehension replaces numbers divisible by 3 and 5 with 'FizzBuzz', 3 with 'Fizz', and 5 with 'Buzz'."
+    }
+  },
+  {
+    "question": "Create a matrix (list of lists) representing a 3x3 identity matrix",
+    "sampleOutput": "[[1, 0, 0], [0, 1, 0], [0, 0, 1]]",
+    "solution": {
+      "answer": "[[1 if i == j else 0 for j in range(3)] for i in range(3)]",
+      "explanation": "This nested comprehension creates rows of the identity matrix by checking if row index equals column index."
+    }
+  },
+  {
+    "question": "Transpose a matrix [[1, 2, 3], [4, 5, 6], [7, 8, 9]]",
+    "sampleOutput": "[[1, 4, 7], [2, 5, 8], [3, 6, 9]]",
+    "solution": {
+      "answer": "[[row[i] for row in [[1, 2, 3], [4, 5, 6], [7, 8, 9]]] for i in range(3)]",
+      "explanation": "This comprehension iterates over columns of the original matrix to form rows of the transposed matrix."
+    }
+  },
+  {
+    "question": "Flatten a deeply nested list of lists [[1, [2, 3]], [[4, 5]], [6]] into a single list",
+    "sampleOutput": "[1, 2, 3, 4, 5, 6]",
+    "solution": {
+      "answer": "from itertools import chain; list(chain.from_iterable([item if isinstance(item, list) else [item] for sublist in [[1, [2, 3]], [[4, 5]], [6]] for item in sublist]))",
+      "explanation": "This uses a combination of list comprehension and itertools.chain to handle multiple nesting levels."
+    }
+  },
+  {
+    "question": "Generate a list of all prime numbers between 1 and 100",
+    "sampleOutput": "[2, 3, 5, 7, 11, 13, ..., 97]",
+    "solution": {
+      "answer": "[x for x in range(2, 101) if all(x % y != 0 for y in range(2, int(x**0.5) + 1))]",
+      "explanation": "This comprehension checks for divisors up to the square root of each number to identify primes."
+    }
+  },
+  {
+    "question": "Generate all permutations of the list [1, 2, 3]",
+    "sampleOutput": "[[1, 2, 3], [1, 3, 2], [2, 1, 3], [2, 3, 1], [3, 1, 2], [3, 2, 1]]",
+    "solution": {
+      "answer": "from itertools import permutations; [list(p) for p in permutations([1, 2, 3])]",
+      "explanation": "This uses itertools.permutations to generate all permutations of the list."
+    }
+  },
+  {
+    "question": "Create a spiral pattern for a 3x3 matrix [[1, 2, 3], [8, 9, 4], [7, 6, 5]] using list comprehension",
+    "sampleOutput": "[[1, 2, 3], [8, 9, 4], [7, 6, 5]]",
+    "solution": {
+      "answer": "[[1, 2, 3], [8, 9, 4], [7, 6, 5]]  # Solution may require breaking out into helper functions for brevity",
+      "explanation": "This is complex and often solved using algorithms rather than pure list comprehension."
+    }
+  },
+  {
+    "question": "Generate Pascal's Triangle up to 5 rows",
+    "sampleOutput": "[[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1]]",
+    "solution": {
+      "answer": "[[1 if j == 0 or j == i else pascal[i-1][j-1] + pascal[i-1][j] for j in range(i + 1)] for i in range(5)]",
+      "explanation": "This uses recursive logic to calculate each row based on the previous row."
+    }
+  },
+  {
+    "question": "Generate a list of all possible combinations of two letters from the string 'abc'",
+    "sampleOutput": "['ab', 'ac', 'bc']",
+    "solution": {
+      "answer": "[a + b for i, a in enumerate('abc') for b in 'abc'[i + 1:]]",
+      "explanation": "This comprehension creates combinations by iterating over pairs of letters in the string."
+    }
+  },
+  {
+    "question": "Filter out all sublists that are not sorted from [[1, 2, 3], [4, 3, 5], [7, 8, 9], [10, 9, 8]]",
+    "sampleOutput": "[[1, 2, 3], [7, 8, 9]]",
+    "solution": {
+      "answer": "[sublist for sublist in [[1, 2, 3], [4, 3, 5], [7, 8, 9], [10, 9, 8]] if sublist == sorted(sublist)]",
+      "explanation": "This comprehension checks if each sublist equals its sorted version."
+    }
+  },
+  {
+    "question": "Generate a dictionary where keys are integers from 1 to 10 and values are lists of their divisors",
+    "sampleOutput": "{1: [1], 2: [1, 2], 3: [1, 3], 4: [1, 2, 4], ...}",
+    "solution": {
+      "answer": "{x: [d for d in range(1, x + 1) if x % d == 0] for x in range(1, 11)}",
+      "explanation": "This comprehension generates lists of divisors for each integer from 1 to 10."
+    }
+  }
 ]
