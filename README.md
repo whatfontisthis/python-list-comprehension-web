@@ -2,8 +2,9 @@
 
 Inspired by <a href='https://www.tutorjoes.in/python_programming_tutorial/list_comprehensions_exercises_in_python#google_vignette'> Tutor Joe's Stanley</a>
 
-**Python 리스트 컴프리헨션 연습 문제** 프로젝트에 오신 것을 환영합니다! 🚀  
-이 인터랙티브 웹 페이지는 Python의 리스트 컴프리헨션을 연습하고 마스터하기 위한 다양한 문제를 제공합니다. 문제는 **쉬움**부터 **어려움**까지 세 가지 난이도로 구성되어 있습니다.
+**Python 리스트 컴프리헨션 연습 문제** 도장에 오신 것을 환영합니다! 🚀  
+이 인터랙티브 웹 페이지는 Python의 리스트 컴프리헨션을 연습하고 마스터하기 위한 다양한 문제를 제공합니다. 
+문제는 **쉬움**부터 **어려움**까지 세 가지 난이도로 구성되어 있습니다.
 
 ## 주요 기능
 
@@ -25,9 +26,10 @@ Inspired by <a href='https://www.tutorjoes.in/python_programming_tutorial/list_c
 ## 설치
 
 1. VS Code 설치
-2. VS Code의 확장 기능에서 "Jupyter" 플러그인 설치.
+2. VS Code의 확장 기능에서 "Jupyter" 설치.
+3. VS Code의 "Live Server" 설치
 
 ## 사용 방법
 
-1. `index.html`를 열어 문제와 해설 보기
+1. VS 코드에서 `index.html`를 Live Server로 열기
 2. `notebook.ipynb`에서 연습하기
